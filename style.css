@@ -42,6 +42,7 @@ input{
     border-radius: 5px;
     border: 2px solid #54ACDB;
     outline: none;
+    width: 90%;
 }
 form{
     height: 95%;
@@ -54,6 +55,21 @@ form{
     border-radius: 10px;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
 }
-form>input{
+form>button{
+    background-color: #0c85c6;
+    font-family: serif;
     width: 90%;
+    color: white;
+    cursor: pointer;
+    font-size: large;
+    text-align: center;
+    border-radius: 5px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-top: 0.5rem;
+}
+form>button:hover{
+    background-color: #54ACDB;
+    scale: 105%;
+    outline: none;
 }
