@@ -15,31 +15,42 @@ const regexEmail = /^\w*(\-\w)?(\.\w*)?@\w*(-\w*)?\.\w{2,3}(\.\w{2,3})?$/;
 const regexPassword = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).{6,12}$/;
 function validateForm(e){
     e.preventDefault();
-    if(!regex.test(firstName.value)){
+    if(!regex.test(firstName.value) || !(firstName.value)){
         firstError.style.display = "block"
         firstError.textContent = "Please type alphabbetic letters only"
         firstName.style.border = "2px solid red";
     }
-    else if(!regex.test(lastName.value)){
+    else if(!regex.test(lastName.value) || !(lastName.value)){
         firstError.style.display = "none";
         firstName.style.border = "2px solid #54ACDB";
         lastError.style.display = "block";
         lastError.textContent = "Please type alphabbetic letters only";
         lastName.style.border = "2px solid red";
     }
-    else if(!regexEmail.test(Email.value)){
+    else if(!regexEmail.test(Email.value) || !(Email.value)){
+        firstError.style.display = "none";
+        firstName.style.border = "2px solid #54ACDB";
         lastError.style.display = "none";
         lastName.style.border = "2px solid #54ACDB";
         emailError.style.display = "block"
         emailError.textContent = "Please Type Appropriate Email Address"
     }
-    else if(!regexPassword.test(password.value)){
+    else if(!regexPassword.test(password.value) || !(password.value)){
         emailError.style.display = "none";
+        firstError.style.display = "none";
+        firstName.style.border = "2px solid #54ACDB";
+        lastError.style.display = "none";
+        lastName.style.border = "2px solid #54ACDB";
         password.style.border = "2px solid red";
         passwordError.style.display = "block";
         passwordError.textContent = "Please Type A password between 6 and 12 that contains at least one uppercase, one lower case , one digit & one other characters"
     }
-    else if(password.value != confrim_password.value){
+    else if(password.value != confrim_password.value || !(confrim_password.value)){
+        emailError.style.display = "none";
+        firstError.style.display = "none";
+        firstName.style.border = "2px solid #54ACDB";
+        lastError.style.display = "none";
+        lastName.style.border = "2px solid #54ACDB";
         password.style.border = "2px solid #54ACDb";
         passwordError.style.display = "none";
         confrimpassword.style.display = "block";
@@ -47,8 +58,9 @@ function validateForm(e){
         confrim_password.style.border = "2px solid red";
     }
     else{
-      confrimpassword.style.display = "none";
-      confrim_password.style.border = '2px solid #54ACDB';
+        confrimpassword.style.display = "none";
+        confrim_password.style.border = '2px solid #54ACDB';
+        alert("Hello THERE")
     }
     }
 myform.addEventListener('submit', validateForm);
