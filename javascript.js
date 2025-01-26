@@ -4,10 +4,12 @@ const firstName = document.getElementById('first_name');
 const lastName = document.getElementById('last_name');
 const Email = document.getElementById("user_email");
 const password = document.getElementById("user_password");
+const confrim_password = document.getElementById("confrim_password");
 const firstError = document.getElementById('firstname');
 const lastError = document.getElementById('lastname');
 const emailError = document.getElementById('emailError');
 const passwordError = document.getElementById('passwordError');
+const confrimpassword = document.getElementById('confrimpassword');
 const regex = /^[a-zA-Z]+$/;
 const regexEmail = /^\w*(\-\w)?(\.\w*)?@\w*(-\w*)?\.\w{2,3}(\.\w{2,3})?$/;
 const regexPassword = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).{6,12}$/;
@@ -37,9 +39,16 @@ function validateForm(e){
         passwordError.style.display = "block";
         passwordError.textContent = "Please Type A password between 6 and 12 that contains at least one uppercase, one lower case , one digit & one other characters"
     }
-    else{
+    else if(password.value != confrim_password.value){
         password.style.border = "2px solid #54ACDb";
         passwordError.style.display = "none";
+        confrimpassword.style.display = "block";
+        confrimpassword.textContent = "please make sure password and confrim password is the same";
+        confrim_password.style.border = "2px solid red";
+    }
+    else{
+      confrimpassword.style.display = "none";
+      confrim_password.style.border = '2px solid #54ACDB';
     }
     }
 myform.addEventListener('submit', validateForm);
