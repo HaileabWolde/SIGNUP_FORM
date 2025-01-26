@@ -13,18 +13,23 @@
             <img src="./assets/login.png" alt="signupPic">
         </div>
         <div class="formContainer">
-            <form action="" method="">
+            <form action="" method="" id="myform">
                 <h1>SIGN UP FORM</h1>
                 <label for="first_name">First Name:</label>
                 <input type="text" id="first_name" placeholder="First Name" name="first_name">
+                <span id="firstname"></span>
                 <label for="last_name">Last Name:</label>
                 <input type="text" id="last_name" placeholder="Last Name" name="last_name">
-                <label for="user_email">Email Address:</label>
+                <span id="lastname"></span>
+                <label for="user_email">*Email Address:</label>
                 <input type="email" id="user_email" name="email" placeholder="you@example.com">
-                <label for="user_password">Password:</label>
+                <span id="emailError"></span>
+                <label for="user_password">*Password:</label>
                 <input type="password" id="user_password" name="password" placeholder="Password">
+                <span id="passwordError"></span>
                 <label for="confrim_password">Confrim Password:</label>
                 <input type="password" id="confrim_password" name="confrim_password" placeholder="Confrim Password">
+                <span id="confrim_password"></span>
                 <button type="submit">SIGNUP</button>
             </form>
         </div>
