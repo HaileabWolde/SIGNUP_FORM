@@ -18,6 +18,7 @@ function validateForm(e){
     if(!regex.test(firstName.value) || !(firstName.value)){
         firstError.style.display = "block"
         firstError.textContent = "Please type alphabbetic letters only"
+        firstError.style.color = '#EA0063'
         firstName.style.border = "2px solid red";
     }
     else if(!regex.test(lastName.value) || !(lastName.value)){
@@ -43,7 +44,7 @@ function validateForm(e){
         lastName.style.border = "2px solid #54ACDB";
         password.style.border = "2px solid red";
         passwordError.style.display = "block";
-        passwordError.textContent = "Please Type A password between 6 and 12 that contains at least one uppercase, one lower case , one digit & one other characters"
+        passwordError.textContent = "Please Type A password b/n 6 and 12 containing atleast 1 uppercase, 1 lowwercase, 1character"
     }
     else if(password.value != confrim_password.value || !(confrim_password.value)){
         emailError.style.display = "none";
