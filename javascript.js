@@ -5,6 +5,7 @@ const lastName = document.getElementById('last_name');
 const Email = document.getElementById("user_email");
 const password = document.getElementById("user_password");
 const confrim_password = document.getElementById("confrim_password");
+const Eye = document.getElementById("eye");
 const firstError = document.getElementById('firstname');
 const lastError = document.getElementById('lastname');
 const emailError = document.getElementById('emailError');
@@ -13,6 +14,13 @@ const confrimpassword = document.getElementById('confrimpassword');
 const regex = /^[a-zA-Z]+$/;
 const regexEmail = /^\w*(\-\w)?(\.\w*)?@\w*(-\w*)?\.\w{2,3}(\.\w{2,3})?$/;
 const regexPassword = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).{6,12}$/;
+let passValue = true;
+
+function passwordTypeChanger(){
+    passValue = !passValue;
+    (passValue) ? password.type = "password" : password.type = "text";
+
+}
 function validateForm(e){
     e.preventDefault();
     if(!regex.test(firstName.value) || !(firstName.value)){
@@ -74,4 +82,5 @@ function validateForm(e){
     }
     }
 myform.addEventListener('submit', validateForm);
+Eye.addEventListener('click', passwordTypeChanger);
     
