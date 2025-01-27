@@ -28,14 +28,6 @@ h1{
    align-items: stretch;
    position: relative;
 }
-.odinProject{
-    width: 20%;
-    height: 20%;
-    background-color: #1C274C;
-    position: absolute;
-    top: 2%;
-    left: 20px;
-}
 .imageContainer>img{
     width: 100%;
 }
