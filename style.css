@@ -84,3 +84,20 @@ input::placeholder {
 #firstname, #lastname, #emailError{
     display: none;
 }
+.password-container {
+    position: relative;
+    width: 90%; /* Matches input width */
+}
+
+.password-container input {
+    width: 100%; /* Full width inside the container */
+}
+
+.password-container i {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    cursor: pointer; /* For better usability */
+    color: #666; /* Optional: adjust icon color */
+}

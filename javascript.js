@@ -19,6 +19,7 @@ function validateForm(e){
         firstError.style.display = "block"
         firstError.textContent = "Please type alphabbetic letters only"
         firstError.style.color = '#EA0063'
+        firstError.style.fontStyle = "italic"
         firstName.style.border = "2px solid red";
     }
     else if(!regex.test(lastName.value) || !(lastName.value)){
@@ -26,6 +27,8 @@ function validateForm(e){
         firstName.style.border = "2px solid #54ACDB";
         lastError.style.display = "block";
         lastError.textContent = "Please type alphabbetic letters only";
+        lastError.style.color = '#EA0063';
+        lastError.style.fontStyle = "italic";
         lastName.style.border = "2px solid red";
     }
     else if(!regexEmail.test(Email.value) || !(Email.value)){
@@ -33,8 +36,10 @@ function validateForm(e){
         firstName.style.border = "2px solid #54ACDB";
         lastError.style.display = "none";
         lastName.style.border = "2px solid #54ACDB";
-        emailError.style.display = "block"
-        emailError.textContent = "Please Type Appropriate Email Address"
+        emailError.style.display = "block";
+        emailError.textContent = "Please Type Appropriate Email Address";
+        emailError.style.color = '#EA0063';
+        emailError.style.fontStyle = "italic";
     }
     else if(!regexPassword.test(password.value) || !(password.value)){
         emailError.style.display = "none";
@@ -45,6 +50,8 @@ function validateForm(e){
         password.style.border = "2px solid red";
         passwordError.style.display = "block";
         passwordError.textContent = "Please Type A password b/n 6 and 12 containing atleast 1 uppercase, 1 lowwercase, 1character"
+        passwordError.style.color = '#EA0063';
+        passwordError.style.fontStyle = "italic";
     }
     else if(password.value != confrim_password.value || !(confrim_password.value)){
         emailError.style.display = "none";
@@ -56,6 +63,8 @@ function validateForm(e){
         passwordError.style.display = "none";
         confrimpassword.style.display = "block";
         confrimpassword.textContent = "please make sure password and confrim password is the same";
+        confrimpassword.style.color = '#EA0063';
+        confrimpassword.style.fontStyle = "italic";
         confrim_password.style.border = "2px solid red";
     }
     else{

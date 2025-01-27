@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>SIGNUP FORM</title>
     <link rel="stylesheet" href="./style.css">
     <script src="javascript.js" defer></script>
@@ -25,7 +26,10 @@
                 <input type="email" id="user_email" name="email" placeholder="you@example.com">
                 <span id="emailError"></span>
                 <label for="user_password">*Password:</label>
-                <input type="password" id="user_password" name="password" placeholder="Password">
+                <div class="password-container">
+                    <input type="password" id="user_password" name="password" placeholder="Password">
+                    <i class="fa fa-eye" aria-hidden="true"></i>
+                </div>
                 <span id="passwordError"></span>
                 <label for="confrim_password">Confrim Password:</label>
                 <input type="password" id="confrim_password" name="confrim_password" placeholder="Confrim Password">
