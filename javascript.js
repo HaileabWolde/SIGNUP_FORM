@@ -21,8 +21,8 @@ function passwordTypeChanger(){
     (passValue) ? password.type = "password" : password.type = "text";
 
 }
-function validateForm(e){
-    e.preventDefault();
+function validateForm(event){
+    event.preventDefault();
     if(!regex.test(firstName.value) || !(firstName.value)){
         firstError.style.display = "block"
         firstError.textContent = "Please type alphabbetic letters only"
